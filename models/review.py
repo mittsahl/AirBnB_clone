@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """review data"""
-
+from models.base_model import BaseModel
 
 class Review(BaseModel):
     """review data"""

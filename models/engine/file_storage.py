@@ -3,7 +3,7 @@
 
 import json
 from models.base_model import BaseModel
-
+from models.user import User
 
 class FileStorage:
     """File storage engine"""
@@ -34,5 +34,7 @@ class FileStorage:
             for obj in leest:
                 if obj['__class__'] == "BaseModel":
                     self.new(BaseModel(**obj))
+                if obj['__class__'] == "User":
+                    self.new(User(**obj))
         except Exception:
             pass
